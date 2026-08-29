@@ -65,8 +65,8 @@ class TestContextRecall:
 class TestAnswerFaithfulness:
 
     def test_fully_grounded_answer(self):
-        context = "The capital of France is Paris and it has the Eiffel Tower."
-        answer = "Paris is the capital of France."
+        context = "The capital of France is Paris and it has the Eiffel Tower"
+        answer = "Paris is the capital of France"
         ev = GenerationEvaluation("q", answer, context)
         assert answer_faithfulness(ev).score == pytest.approx(1.0)
 
